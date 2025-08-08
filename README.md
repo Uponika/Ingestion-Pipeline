@@ -1,19 +1,5 @@
-<!-- # Ingestion-Pipeline
 
-## Overview
-
-This is a Azure based Ingestion pipeline that contains capabilities of Azure services like Azure Function Apps, Azure Service Bus, Azure Blob Storage and Azure AI Search.
-
-There is a retreival code "chat_completion.py" is also attached in the repository to retrieve a sample query from the AI Search Index.
-
-The repository is divided in two major directories:
-1. FileUploadFunctionApp: This is responsible for uploading files and storing them in Blob Storage container. Also a service bus queue message payload is designed with file url and metadata. The service bus listens to the function app and once the file is stored in blob storage, a message is sent to the queue.
-
-2. ServiceBusListener: This is also a function app which consumes message from a queue and reads it for the file url. It then downloads the file from the blob url, chunk it, vectorize it using OpenAI embeddings. An index is created in AI Search to which the vectors gets stored.
-
-Within the ServiceBusListener repository, a chat_completion.py file helps to retrieve content from the AI Search index using REST API. -->
-
-# 🚀 Azure-Based Ingestion Pipeline for RAG Applications
+# Azure-Based Ingestion Pipeline for RAG Applications
 
 This repository provides an end-to-end ingestion pipeline using **Azure Services**, designed to prepare and index documents for use in a Retrieval-Augmented Generation (RAG) application. It includes components for file upload, message queueing, embedding generation, and indexing in **Azure AI Search**.
 
@@ -22,7 +8,7 @@ This repository provides an end-to-end ingestion pipeline using **Azure Services
 
 ---
 
-## 🧩 Components
+## Components
 
 ### 1. FileUploadFunctionApp
 - Uploads files to Azure Blob Storage.
@@ -37,7 +23,7 @@ This repository provides an end-to-end ingestion pipeline using **Azure Services
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 - Azure Subscription with:
   - Blob Storage
@@ -50,7 +36,7 @@ This repository provides an end-to-end ingestion pipeline using **Azure Services
 
 ---
 
-## 🔧 Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 
