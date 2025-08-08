@@ -1,0 +1,7 @@
+azure-functions
+azure-servicebus
+azure-storage-blob
+azure-search-documents>=11.4.0b6
+PyPDF2
+python-docx
+openai>=1.0.0
